@@ -4,13 +4,13 @@ const designs = [
         id: 1, 
         title: "Cozy Modern Desk Essentials",
         style: "Modern / Productivity",
-        image: "images/pin-1.png", // Make sure this matches your file name!
+        image: "images/pin-1/img.png", // Make sure this matches your file name!
         products: [
             // PASTE YOUR US AMAZON LINKS BELOW
-            { name: "Industrial Dimmable Lamp (Set of 2)", price: "$64.00", link: "https://amzn.to/4qqDDmC" },
-            { name: "40oz Tumbler with Handle (Beige)", price: "$24.99", link: "https://amzn.to/4anllwq" },
-            { name: "Decorative Faux Books (Set of 2)", price: "$14.99", link: "https://amzn.to/4trebQs" },
-            { name: "Concrete Desk Organizer Set", price: "$14.99", link: "https://amzn.to/3ZmaA8K" }
+            { name: "Industrial Dimmable Lamp (Set of 2)", price: "View on Amazon", img: "images/pin-1/lamp-thumb.jpg", link: "https://amzn.to/4qqDDmC" },
+            { name: "40oz Tumbler with Handle (Beige)", price: "View on Amazon", img: "images/pin-1/thumbler.jpg", link: "https://amzn.to/4anllwq" },
+            { name: "Decorative Faux Books (Set of 2)", price: "View on Amazon", img: "images/pin-1/faux-books.jpg", link: "https://amzn.to/4trebQs" },
+            { name: "Concrete Desk Organizer Set", price: "View on Amazon",  img: "images/pin-1/organizer-set.jpg", link: "https://amzn.to/3ZmaA8K" }
         ]
     },
     // {
@@ -164,5 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
 
