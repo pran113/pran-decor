@@ -1,0 +1,158 @@
+/* --- Variables & Reset --- */
+:root {
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+    --color-dark: #1a1a1a;
+    --color-accent: #c6a87c; /* Gold/Beige accent */
+    --color-bg: #f9f9f9;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Brand Logo Styling --- */
+.brand-script {
+    font-family: 'Great Vibes', cursive; /* Fallback to cursive if not loaded, mostly relies on Playfair italic */
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+.brand-bold {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+/* --- Glassmorphism Navbar --- */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+    color: white;
+    margin-bottom: 2rem;
+}
+.hero-section .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Typography Helpers --- */
+.font-serif { font-family: var(--font-serif); }
+.tracking-wide { letter-spacing: 1.5px; }
+.text-accent { color: var(--color-accent); }
+
+/* --- Masonry Grid (The Magic) --- */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+@media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+@media (min-width: 992px) { .masonry-grid { column-count: 3; } }
+
+/* Grid Item Card */
+.grid-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.grid-item:hover img {
+    transform: scale(1.03);
+}
+
+/* Overlay on Card Hover */
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+.grid-item:hover .grid-overlay { opacity: 1; }
+
+/* --- Product List in Modal --- */
+.product-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    transition: background 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+.product-card:hover {
+    background: #f8f9fa;
+    border-color: #ddd;
+}
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+}
+
+/* --- Animations --- */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* If your logo is BLACK and needs to be WHITE in the footer: */
+footer .brand-footer img {
+    filter: invert(1) brightness(100%); 
+}
+
+/* Ensure images don't get squished */
+.navbar-brand img, .brand-footer img {
+    width: auto;
+    object-fit: contain;
+}
