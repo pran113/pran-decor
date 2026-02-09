@@ -1,49 +1,62 @@
 // --- Data: The "Database" of Designs ---
 const designs = [
-    {
-        id: 1,
-        title: "Minimalist Japandi Bedroom",
-        style: "Japandi",
-        image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=800&auto=format&fit=crop",
+     {
+        id: 1, 
+        title: "Cozy Modern Desk Essentials",
+        style: "Modern / Productivity",
+        image: "images/pin-1.png", // Make sure this matches your file name!
         products: [
-            { name: "Low Profile Platform Bed", price: "$249", img: "", link: "#" },
-            { name: "Rice Paper Floor Lamp", price: "$45", img: "", link: "#" },
-            { name: "Linen Duvet Set - Beige", price: "$89", img: "", link: "#" }
+            // PASTE YOUR US AMAZON LINKS BELOW
+            { name: "Industrial Dimmable Lamp (Set of 2)", price: "$64.00", link: "https://amzn.to/4qqDDmC" },
+            { name: "40oz Tumbler with Handle (Beige)", price: "$24.99", link: "https://amzn.to/4anllwq" },
+            { name: "Decorative Faux Books (Set of 2)", price: "$14.99", link: "https://amzn.to/4trebQs" },
+            { name: "Concrete Desk Organizer Set", price: "$14.99", link: "https://amzn.to/3ZmaA8K" }
         ]
     },
-    {
-        id: 2,
-        title: "Dark Academia Study",
-        style: "Vintage",
-        image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop",
-        products: [
-            { name: "Vintage Leather Desk Chair", price: "$120", img: "", link: "#" },
-            { name: "Antique Brass Desk Lamp", price: "$35", img: "", link: "#" },
-            { name: "Mahogany Writing Desk", price: "$199", img: "", link: "#" }
-        ]
-    },
-    {
-        id: 3,
-        title: "Boho Chic Living Room",
-        style: "Bohemian",
-        image: "https://images.unsplash.com/photo-1522444195799-478538b28823?q=80&w=800&auto=format&fit=crop",
-        products: [
-            { name: "Rattan Lounge Chair", price: "$150", img: "", link: "#" },
-            { name: "Macrame Wall Hanging", price: "$25", img: "", link: "#" },
-            { name: "Jute Area Rug", price: "$60", img: "", link: "#" }
-        ]
-    },
-    {
-        id: 4,
-        title: "Modern Gamer Setup",
-        style: "Tech",
-        image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=800&auto=format&fit=crop",
-        products: [
-            { name: "RGB Mechanical Keyboard", price: "$80", img: "", link: "#" },
-            { name: "Ergonomic Mesh Chair", price: "$200", img: "", link: "#" },
-            { name: "Ultrawide Monitor Arm", price: "$40", img: "", link: "#" }
-        ]
-    },
+    // {
+    //     id: 2,
+    //     title: "Minimalist Japandi Bedroom",
+    //     style: "Japandi",
+    //     image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=800&auto=format&fit=crop",
+    //     products: [
+    //         { name: "Low Profile Platform Bed", price: "$249", img: "", link: "#" },
+    //         { name: "Rice Paper Floor Lamp", price: "$45", img: "", link: "#" },
+    //         { name: "Linen Duvet Set - Beige", price: "$89", img: "", link: "#" }
+    //     ]
+    // },
+    // {
+    //     id: 3,
+    //     title: "Dark Academia Study",
+    //     style: "Vintage",
+    //     image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop",
+    //     products: [
+    //         { name: "Vintage Leather Desk Chair", price: "$120", img: "", link: "#" },
+    //         { name: "Antique Brass Desk Lamp", price: "$35", img: "", link: "#" },
+    //         { name: "Mahogany Writing Desk", price: "$199", img: "", link: "#" }
+    //     ]
+    // },
+    // {
+    //     id: 4,
+    //     title: "Boho Chic Living Room",
+    //     style: "Bohemian",
+    //     image: "https://images.unsplash.com/photo-1522444195799-478538b28823?q=80&w=800&auto=format&fit=crop",
+    //     products: [
+    //         { name: "Rattan Lounge Chair", price: "$150", img: "", link: "#" },
+    //         { name: "Macrame Wall Hanging", price: "$25", img: "", link: "#" },
+    //         { name: "Jute Area Rug", price: "$60", img: "", link: "#" }
+    //     ]
+    // },
+    // {
+    //     id: 5,
+    //     title: "Modern Gamer Setup",
+    //     style: "Tech",
+    //     image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=800&auto=format&fit=crop",
+    //     products: [
+    //         { name: "RGB Mechanical Keyboard", price: "$80", img: "", link: "#" },
+    //         { name: "Ergonomic Mesh Chair", price: "$200", img: "", link: "#" },
+    //         { name: "Ultrawide Monitor Arm", price: "$40", img: "", link: "#" }
+    //     ]
+    // },
     // {
     //     id: 5,
     //     title: "Scandi Coffee Corner",
@@ -55,19 +68,19 @@ const designs = [
     //         { name: "Ceramic Mug Set", price: "$20", img: "", link: "#" }
     //     ]
     // },
-    {
-        id: 5, 
-        title: "Cozy Modern Desk Essentials",
-        style: "Modern / Productivity",
-        image: "images/pin-1.png", // Make sure this matches your file name!
-        products: [
-            // PASTE YOUR US AMAZON LINKS BELOW
-            { name: "Industrial Dimmable Lamp (Set of 2)", price: "$39.99", link: "YOUR_US_AMAZON_LINK_HERE" },
-            { name: "40oz Tumbler with Handle (Beige)", price: "$19.99", link: "YOUR_US_AMAZON_LINK_HERE" },
-            { name: "Decorative Faux Books (Set of 2)", price: "$18.99", link: "YOUR_US_AMAZON_LINK_HERE" },
-            { name: "Concrete Desk Organizer Set", price: "$24.99", link: "YOUR_US_AMAZON_LINK_HERE" }
-        ]
-    }
+    // {
+    //     id: 5, 
+    //     title: "Cozy Modern Desk Essentials",
+    //     style: "Modern / Productivity",
+    //     image: "images/pin-1.png", // Make sure this matches your file name!
+    //     products: [
+    //         // PASTE YOUR US AMAZON LINKS BELOW
+    //         { name: "Industrial Dimmable Lamp (Set of 2)", price: "$39.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+    //         { name: "40oz Tumbler with Handle (Beige)", price: "$19.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+    //         { name: "Decorative Faux Books (Set of 2)", price: "$18.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+    //         { name: "Concrete Desk Organizer Set", price: "$24.99", link: "YOUR_US_AMAZON_LINK_HERE" }
+    //     ]
+    // }
 ];
 
 // --- Variables ---
@@ -151,4 +164,5 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
