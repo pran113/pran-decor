@@ -44,19 +44,19 @@ const designs = [
             { name: "Ultrawide Monitor Arm", price: "$40", img: "", link: "#" }
         ]
     },
+    // {
+    //     id: 5,
+    //     title: "Scandi Coffee Corner",
+    //     style: "Scandinavian",
+    //     image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+    //     products: [
+    //         { name: "Espresso Machine White", price: "$400", img: "", link: "#" },
+    //         { name: "Floating Oak Shelves", price: "$30", img: "", link: "#" },
+    //         { name: "Ceramic Mug Set", price: "$20", img: "", link: "#" }
+    //     ]
+    // },
     {
-        id: 5,
-        title: "Scandi Coffee Corner",
-        style: "Scandinavian",
-        image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
-        products: [
-            { name: "Espresso Machine White", price: "$400", img: "", link: "#" },
-            { name: "Floating Oak Shelves", price: "$30", img: "", link: "#" },
-            { name: "Ceramic Mug Set", price: "$20", img: "", link: "#" }
-        ]
-    },
-    {
-        id: 6, 
+        id: 5, 
         title: "Cozy Modern Desk Essentials",
         style: "Modern / Productivity",
         image: "images/pin-1.png", // Make sure this matches your file name!
@@ -151,3 +151,4 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
