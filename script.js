@@ -1,15 +1,14 @@
 // --- Data: The "Database" of Designs ---
-// In a real app, this would come from a JSON file or API.
 const designs = [
     {
         id: 1,
         title: "Minimalist Japandi Bedroom",
         style: "Japandi",
-        image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=800&auto=format&fit=crop", // Replace with your AI Image
+        image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=800&auto=format&fit=crop",
         products: [
-            { name: "Low Profile Platform Bed", price: "$249", img: "https://m.media-amazon.com/images/I/71+Example.jpg", link: "#" },
-            { name: "Rice Paper Floor Lamp", price: "$45", img: "https://m.media-amazon.com/images/I/61+Example.jpg", link: "#" },
-            { name: "Linen Duvet Set - Beige", price: "$89", img: "https://m.media-amazon.com/images/I/81+Example.jpg", link: "#" }
+            { name: "Low Profile Platform Bed", price: "$249", img: "", link: "#" },
+            { name: "Rice Paper Floor Lamp", price: "$45", img: "", link: "#" },
+            { name: "Linen Duvet Set - Beige", price: "$89", img: "", link: "#" }
         ]
     },
     {
@@ -55,14 +54,31 @@ const designs = [
             { name: "Floating Oak Shelves", price: "$30", img: "", link: "#" },
             { name: "Ceramic Mug Set", price: "$20", img: "", link: "#" }
         ]
+    },
+    {
+        id: 6, 
+        title: "Cozy Modern Desk Essentials",
+        style: "Modern / Productivity",
+        image: "images/pin-1.png", // Make sure this matches your file name!
+        products: [
+            // PASTE YOUR US AMAZON LINKS BELOW
+            { name: "Industrial Dimmable Lamp (Set of 2)", price: "$39.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+            { name: "40oz Tumbler with Handle (Beige)", price: "$19.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+            { name: "Decorative Faux Books (Set of 2)", price: "$18.99", link: "YOUR_US_AMAZON_LINK_HERE" },
+            { name: "Concrete Desk Organizer Set", price: "$24.99", link: "YOUR_US_AMAZON_LINK_HERE" }
+        ]
     }
 ];
+
+// --- Variables ---
+const gridContainer = document.getElementById('grid-container');
+// We need to access the DOM element AND the Bootstrap instance
+const productModalElement = document.getElementById('productModal');
+const productModal = new bootstrap.Modal(productModalElement);
 
 // --- Functions ---
 
 // 1. Render the Grid
-const gridContainer = document.getElementById('grid-container');
-
 function renderGrid() {
     gridContainer.innerHTML = designs.map(design => `
         <div class="grid-item" onclick="openModal(${design.id})">
@@ -78,11 +94,14 @@ function renderGrid() {
 }
 
 // 2. Open Modal & Populate Data
-const productModal = new bootstrap.Modal(document.getElementById('productModal'));
-
 function openModal(id) {
     const design = designs.find(d => d.id === id);
     if (!design) return;
+
+    // --- NEW: Update URL for Deep Linking ---
+    // This adds "?id=6" to your browser URL bar without reloading the page
+    const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?id=' + id;
+    window.history.pushState({path: newUrl}, '', newUrl);
 
     // Set Image & Text
     document.getElementById('modalImage').src = design.image;
@@ -95,7 +114,8 @@ function openModal(id) {
     productListContainer.innerHTML = design.products.map(product => `
         <a href="${product.link}" target="_blank" class="product-card">
             <div class="product-img d-flex align-items-center justify-content-center text-muted">
-                <i class="fa-solid fa-image"></i> </div>
+                <i class="fa-solid fa-image"></i> 
+            </div>
             <div class="flex-grow-1">
                 <h6 class="mb-0 fw-semibold text-dark">${product.name}</h6>
                 <small class="text-success fw-bold">${product.price}</small>
@@ -109,7 +129,25 @@ function openModal(id) {
     productModal.show();
 }
 
-// --- Initialize ---
+// --- Event Listeners ---
+
+// 1. Clean URL when Modal Closes
+// When user closes the popup, remove "?id=6" so the URL goes back to normal
+productModalElement.addEventListener('hidden.bs.modal', () => {
+    const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    window.history.pushState({path: cleanUrl}, '', cleanUrl);
+});
+
+// 2. Initialize & Check Router
 document.addEventListener('DOMContentLoaded', () => {
     renderGrid();
+
+    // Check if the URL has an ID (e.g., website.com/?id=6)
+    const urlParams = new URLSearchParams(window.location.search);
+    const designId = parseInt(urlParams.get('id'));
+
+    // If there is an ID, open that modal automatically
+    if (designId) {
+        openModal(designId);
+    }
 });
