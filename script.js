@@ -125,14 +125,19 @@ function openModal(id) {
     const productListContainer = document.getElementById('modalProducts');
     
     productListContainer.innerHTML = design.products.map(product => `
-        <a href="${product.link}" target="_blank" class="product-card">
-            <div class="product-img d-flex align-items-center justify-content-center text-muted">
-                <i class="fa-solid fa-image"></i> 
+        <a href="${product.link}" target="_blank" class="product-card text-decoration-none">
+            <div class="product-img d-flex align-items-center justify-content-center text-muted overflow-hidden">
+                ${product.img 
+                    ? `<img src="${product.img}" alt="${product.name}" class="w-100 h-100 object-fit-contain">` 
+                    : `<i class="fa-solid fa-image"></i>`
+                } 
             </div>
-            <div class="flex-grow-1">
+            
+            <div class="flex-grow-1 ps-3">
                 <h6 class="mb-0 fw-semibold text-dark">${product.name}</h6>
                 <small class="text-success fw-bold">${product.price}</small>
             </div>
+            
             <div class="text-primary">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </div>
@@ -164,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
 
 
