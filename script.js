@@ -7,10 +7,10 @@ const designs = [
         image: "images/pin-1/img.png", // Make sure this matches your file name!
         products: [
             // PASTE YOUR US AMAZON LINKS BELOW
-            { name: "Industrial Dimmable Lamp (Set of 2)", price: "View on Amazon", img: "images/pin-1/lamp-thumb.jpg", link: "https://amzn.to/4qqDDmC" },
-            { name: "40oz Tumbler with Handle (Beige)", price: "View on Amazon", img: "images/pin-1/thumbler.jpg", link: "https://amzn.to/4anllwq" },
-            { name: "Decorative Faux Books (Set of 2)", price: "View on Amazon", img: "images/pin-1/faux-books.jpg", link: "https://amzn.to/4trebQs" },
-            { name: "Concrete Desk Organizer Set", price: "View on Amazon",  img: "images/pin-1/organizer-set.jpg", link: "https://amzn.to/3ZmaA8K" }
+            { name: "Industrial Dimmable Lamp (Set of 2)", price: "View on Amazon", img: "images/pin-1/lamp-thumb.webp", link: "https://amzn.to/4qqDDmC" },
+            { name: "40oz Tumbler with Handle (Beige)", price: "View on Amazon", img: "images/pin-1/thumbler.webp", link: "https://amzn.to/4anllwq" },
+            { name: "Decorative Faux Books (Set of 2)", price: "View on Amazon", img: "images/pin-1/faux-books.webp", link: "https://amzn.to/4trebQs" },
+            { name: "Concrete Desk Organizer Set", price: "View on Amazon",  img: "images/pin-1/organizer-set.webp", link: "https://amzn.to/3ZmaA8K" }
         ]
     },
      {
@@ -22,55 +22,55 @@ const designs = [
         {
             name: "Electric Standing Desk",
             price: "View on Amazon",
-            img: "images/pin-3/standing-desk.jpg",
+            img: "images/pin-3/standing-desk.webp",
             link: "https://amzn.to/4r8xSeB"
         },
         {
             name: "Ergonomic Mesh Office Chair (White)",
             price: "View on Amazon",
-            img: "images/pin-3/ergonomic-chair.jpg",
+            img: "images/pin-3/ergonomic-chair.webp",
             link: "https://amzn.to/4a8XNg0"
         },
         {
             name: "Samsung 32” Smart Monitor M8",
             price: "View on Amazon",
-            img: "images/pin-3/samsung-m8.jpg",
+            img: "images/pin-3/samsung-m8.webp",
             link: "https://amzn.to/4ckV9Fn"
         },
         {
             name: "BenQ ScreenBar LED Monitor Light Bar",
             price: "View on Amazon",
-            img: "images/pin-3/screenbar.jpg",
+            img: "images/pin-3/screenbar.webp",
             link: "https://amzn.to/4bL6Fty"
         },
         {
             name: "Retro Beige Coiled USB-C Aviator Keyboard Cable",
             price: "View on Amazon",
-            img: "images/pin-3/coiled-cable.jpg",
+            img: "images/pin-3/coiled-cable.webp",
             link: "https://amzn.to/4ks6DJm"
         },
         {
             name: "Felt Slat Wall Pegboard Organizer (Oatmeal)",
             price: "View on Amazon",
-            img: "images/pin-3/pegboard.jpg",
+            img: "images/pin-3/pegboard.webp",
             link: "https://amzn.to/4ko4uye"
         },
         {
             name: "YUNZII B75 PRO Wireless Mechanical Keyboard (Pink)",
             price: "View on Amazon",
-            img: "images/pin-3/keyboard.jpg",
+            img: "images/pin-3/keyboard.webp",
             link: "https://amzn.to/4trWH6H"
         },
         {
             name: "Baseus Inspire XH1 ANC Headphones (Off-White)",
             price: "View on Amazon",
-            img: "images/pin-3/headphones.jpg",
+            img: "images/pin-3/headphones.webp",
             link: "https://amzn.to/4r8x3T3"
         },
         {
             name: "EWEADN Q9 Wireless Clear Pink Mouse",
             price: "View on Amazon",
-            img: "images/pin-3/mouse.jpg",
+            img: "images/pin-3/mouse.webp",
             link: "https://amzn.to/3ZYkTQq"
         }
     ]
@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
 
 
