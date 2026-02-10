@@ -4,7 +4,7 @@ const designs = [
         id: 1, 
         title: "Cozy Modern Desk Essentials",
         style: "Modern / Productivity",
-        image: "images/pin-1/img.png", // Make sure this matches your file name!
+        image: "images/pin-1/img.webp", // Make sure this matches your file name!
         products: [
             // PASTE YOUR US AMAZON LINKS BELOW
             { name: "Industrial Dimmable Lamp (Set of 2)", price: "View on Amazon", img: "images/pin-1/lamp-thumb.webp", link: "https://amzn.to/4qqDDmC" },
@@ -17,7 +17,7 @@ const designs = [
     id: 3,
     title: "Clean & Minimalist Gaming Desk Setup",
     style: "Minimalist / Gaming / Productivity",
-    image: "images/pin-3/main-setup.png",
+    image: "images/pin-3/main-setup.webp",
     products: [
         {
             name: "Electric Standing Desk",
@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
 
 
