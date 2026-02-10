@@ -13,6 +13,69 @@ const designs = [
             { name: "Concrete Desk Organizer Set", price: "View on Amazon",  img: "images/pin-1/organizer-set.jpg", link: "https://amzn.to/3ZmaA8K" }
         ]
     },
+     {
+    id: 3,
+    title: "Clean & Minimalist Gaming Desk Setup",
+    style: "Minimalist / Gaming / Productivity",
+    image: "images/pin-3/main-setup.png",
+    products: [
+        {
+            name: "Electric Standing Desk",
+            price: "View on Amazon",
+            img: "images/pin-3/standing-desk.jpg",
+            link: "https://amzn.to/4r8xSeB"
+        },
+        {
+            name: "Ergonomic Mesh Office Chair (White)",
+            price: "View on Amazon",
+            img: "images/pin-3/ergonomic-chair.jpg",
+            link: "https://amzn.to/4a8XNg0"
+        },
+        {
+            name: "Samsung 32” Smart Monitor M8",
+            price: "View on Amazon",
+            img: "images/pin-3/samsung-m8.jpg",
+            link: "https://amzn.to/4ckV9Fn"
+        },
+        {
+            name: "BenQ ScreenBar LED Monitor Light Bar",
+            price: "View on Amazon",
+            img: "images/pin-3/screenbar.jpg",
+            link: "https://amzn.to/4bL6Fty"
+        },
+        {
+            name: "Retro Beige Coiled USB-C Aviator Keyboard Cable",
+            price: "View on Amazon",
+            img: "images/pin-3/coiled-cable.jpg",
+            link: "https://amzn.to/4ks6DJm"
+        },
+        {
+            name: "Felt Slat Wall Pegboard Organizer (Oatmeal)",
+            price: "View on Amazon",
+            img: "images/pin-3/pegboard.jpg",
+            link: "https://amzn.to/4ko4uye"
+        },
+        {
+            name: "YUNZII B75 PRO Wireless Mechanical Keyboard (Pink)",
+            price: "View on Amazon",
+            img: "images/pin-3/keyboard.jpg",
+            link: "https://amzn.to/4trWH6H"
+        },
+        {
+            name: "Baseus Inspire XH1 ANC Headphones (Off-White)",
+            price: "View on Amazon",
+            img: "images/pin-3/headphones.jpg",
+            link: "https://amzn.to/4r8x3T3"
+        },
+        {
+            name: "EWEADN Q9 Wireless Clear Pink Mouse",
+            price: "View on Amazon",
+            img: "images/pin-3/mouse.jpg",
+            link: "https://amzn.to/3ZYkTQq"
+        }
+    ]
+}
+
     // {
     //     id: 2,
     //     title: "Minimalist Japandi Bedroom",
@@ -169,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(designId);
     }
 });
+
 
 
 
